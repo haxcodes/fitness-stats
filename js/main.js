@@ -6,7 +6,7 @@ $.ajax({
 }).done(function(data) {
   setTimeout(function(){
     $('.total-steps').html(totalSteps(data));
-  }, 0);
+  }, 500);
 });
 
 var totalSteps = function(data) {
