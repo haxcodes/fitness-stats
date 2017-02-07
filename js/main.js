@@ -1,6 +1,6 @@
 var date = new Date();
 var monthString = date.getFullYear() + '-' + (date.getMonth() + 1)
-var dateString = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + (date.getDate() - 1);
+var dateString = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + (date.getDate());
 
 $.ajax({
   url: "https://hax.codes/fit/api/steps/daily/" + monthString
