@@ -1,11 +1,20 @@
 var date = new Date();
-var monthString = date.getFullYear() + ('0' + (date.getMonth() + 1)).slice(-2)
+var monthString = date.getFullYear() + '-' + (date.getMonth() + 1)
+var dateString = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + (date.getDate() - 1);
 
 $.ajax({
   url: "https://hax.codes/fit/api/steps/daily/" + monthString
 }).done(function(data) {
   setTimeout(function(){
-    $('.total-steps').html(totalSteps(data));
+    $('.month-steps').html(totalSteps(data));
+  }, 500);
+});
+
+$.ajax({
+  url: "https://hax.codes/fit/api/steps/daily/" + dateString
+}).done(function(data) {
+  setTimeout(function(){
+    $('.day-steps').html(totalSteps(data));
   }, 500);
 });
 
@@ -23,3 +32,5 @@ window.odometerOptions = {
   duration: 3000, 
   theme: 'default' 
 };
+
+document.body.style.background = '#' + _.times(3, function(n) { return _.random(160,255).toString(16) }).join('');

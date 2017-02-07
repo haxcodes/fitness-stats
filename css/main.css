@@ -8,9 +8,25 @@
 
 .odometer {
   font-size: 100px;
+  font-weight: bold;
 }
 
+body {
+  font-family: 'Patua One', sans-serif;
+}
 
+h1, h2 {
+  margin-top: 0;
+}
+
+.counter {
+  padding: 20px 0 ;
+}
+
+.title-img {
+  max-width: 300px;
+  padding-top: 15px;
+}
 
 
 
