@@ -10,7 +10,7 @@
         <meta name="description" content="Aonghas's Activity Stats">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
 
@@ -22,17 +22,23 @@
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
     <body>
-    <div class="container text-center">
-      <img src="img/title.png" class="title-img" alt="Footsteps of Aonghas">
-      <div class="counter">
-        <div class="day-steps animate-numbers odometer"></div>
-        <h2>steps today</h2>
+    <div class="container header text-center">
+      <img class="title-img" src="img/title-ottblue.png">
+      <div id="watch-container">
+        <img src="img/wristwatch-01.svg">
+        <div class="watchface">
+          <div class="counter">
+            <div class="day-steps animate-numbers odometer"></div>
+            <div class="step-label">steps today</div>
+          </div>
+          <div class="counter">
+            <div class="month-steps animate-numbers odometer"></div>
+            <div class="step-label">steps this month</div>
+          </div>
+        </div>
       </div>
-      <div class="counter">
-        <div class="month-steps animate-numbers odometer"></div>
-        <h2>steps this month</h2>
-      </div>
-    </div> <!-- /container -->
+    </div>
+
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>

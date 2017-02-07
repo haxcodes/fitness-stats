@@ -2,12 +2,19 @@ var date = new Date();
 var monthString = date.getFullYear() + '-' + (date.getMonth() + 1)
 var dateString = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + (date.getDate());
 
+$(document).ready(function(){
+  $("#watch-container").animate({right: "0%"}, 2000, function() {
+    $("#watch-container").addClass('enlarge');
+  });
+});
+
+
 $.ajax({
   url: "https://hax.codes/fit/api/steps/daily/" + monthString
 }).done(function(data) {
   setTimeout(function(){
     $('.month-steps').html(totalSteps(data));
-  }, 500);
+  }, 2500);
 });
 
 $.ajax({
@@ -15,7 +22,7 @@ $.ajax({
 }).done(function(data) {
   setTimeout(function(){
     $('.day-steps').html(totalSteps(data));
-  }, 500);
+  }, 2600);
 });
 
 var totalSteps = function(data) {
@@ -33,4 +40,4 @@ window.odometerOptions = {
   theme: 'default' 
 };
 
-document.body.style.background = '#' + _.times(3, function(n) { return _.random(160,255).toString(16) }).join('');
+document.body.style.background = '#99' + _.times(2, function(n) { return _.random(160,255).toString(16) }).join('');
