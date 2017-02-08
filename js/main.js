@@ -3,9 +3,7 @@ var monthString = date.getFullYear() + '-' + (date.getMonth() + 1)
 var dateString = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + (date.getDate());
 
 $(document).ready(function(){
-  $("#watch-container").animate({right: "0%"}, 2000, function() {
     $("#watch-container").addClass('enlarge');
-  });
 });
 
 
@@ -14,7 +12,7 @@ $.ajax({
 }).done(function(data) {
   setTimeout(function(){
     $('.month-steps').html(totalSteps(data));
-  }, 2500);
+  }, 2000);
 });
 
 $.ajax({
@@ -22,7 +20,7 @@ $.ajax({
 }).done(function(data) {
   setTimeout(function(){
     $('.day-steps').html(totalSteps(data));
-  }, 2600);
+  }, 2000);
 });
 
 var totalSteps = function(data) {
